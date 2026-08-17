@@ -1,1 +1,126 @@
+:root {
+    --bg-color: #ffffff;
+    --card-bg: #f4f6f8;
+    --text-primary: #000000;
+    --text-secondary: #1e3a8a;
+    --accent-color: #581c87;
+    --radius: 12px;
+}
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    padding: 2rem 1rem;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--text-secondary), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.portfolio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.portfolio-card {
+    background-color: var(--card-bg);
+    border: 1px solid #e2e8f0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(88, 28, 135, 0.15);
+}
+
+.portfolio-card img,
+.portfolio-card video {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.image-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 220px;
+}
+
+.image-row img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-container {
+    background-color: #000;
+}
+
+.card-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.card-content p {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    opacity: 0.85;
+}
+
+.placeholder-card .placeholder-box {
+    width: 100%;
+    height: 220px;
+    background-color: #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 4rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
